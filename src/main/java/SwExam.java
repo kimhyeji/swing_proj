@@ -68,6 +68,15 @@ public class SwExam extends JFrame {
         cp.add(colorCombo);
         cp.add(animalCombo);
 
+        // JList
+        String[] fruits = {"Apple", "Banana", "Cherry", "Mango", "Melon", "Strawberry"};
+
+        JList<String> strFList = new JList<>(fruits);
+        JList fList = new JList(fruits);
+
+        cp.add(new JScrollPane(strFList)); // 스크롤 기능 추가
+        cp.add(fList);
+
         setVisible(true); // 화면에 프레임 출력
 
     }
