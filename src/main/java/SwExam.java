@@ -41,6 +41,23 @@ public class SwExam extends JFrame {
         cp.add(rabbit);
         cp.add(tiger);
 
+        // JRadioButton
+        JLabel colorLabel = new JLabel("색상을 선택해주세요 : ");
+        cp.add(colorLabel);
+
+        ButtonGroup group = new ButtonGroup(); // 그룹으로 묶을 시 하나만 선택 가능
+        JRadioButton red = new JRadioButton("Red");
+        JRadioButton orange = new JRadioButton("orange");
+        JRadioButton yellow = new JRadioButton("yellow", true);
+
+        group.add(red);
+        group.add(orange);
+        group.add(yellow);
+
+        cp.add(red);
+        cp.add(orange);
+        cp.add(yellow);
+
         setVisible(true); // 화면에 프레임 출력
 
     }
