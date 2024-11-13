@@ -23,8 +23,14 @@ public class SwExam extends JFrame {
 
         // JButton
         JButton jButton = new JButton("Button Test");
-        jButton.setBounds(200, 200, 100, 20);
+        jButton.setBounds(130, 130, 100, 20);
         cp.add(jButton);
+
+        // JTextField
+        JTextField jTextField = new JTextField();
+        jTextField.setBounds(200, 200, 200, 30);
+        jTextField.setColumns(10); // 텍트 필드 기본 입력문자 개수
+        cp.add(jTextField);
 
         setVisible(true); // 화면에 프레임 출력
 
