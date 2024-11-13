@@ -58,6 +58,16 @@ public class SwExam extends JFrame {
         cp.add(orange);
         cp.add(yellow);
 
+        // JComboBox
+        String[] colors = {"red", "orange", "yellow", "green", "blue", "navy", "purple", "olive"};
+        String[] animals = {"Lion", "Tiger", "Elephant", "Panda", "Zebra"};
+
+        JComboBox colorCombo = new JComboBox(colors);
+        JComboBox animalCombo = new JComboBox(animals);
+
+        cp.add(colorCombo);
+        cp.add(animalCombo);
+
         setVisible(true); // 화면에 프레임 출력
 
     }
