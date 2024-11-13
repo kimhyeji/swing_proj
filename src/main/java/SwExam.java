@@ -13,8 +13,8 @@ public class SwExam extends JFrame {
         Container cp = getContentPane(); // 프레임에서 컨텐트 팬 받아오기
 
         // Layout
-        cp.setLayout(null);
-//        cp.setLayout(new FlowLayout()); // 왼쪽에서 오른쪽으로 정렬
+//        cp.setLayout(null);
+        cp.setLayout(new FlowLayout()); // 왼쪽에서 오른쪽으로 정렬
 
         // JLabel
         JLabel jLabel = new JLabel("Label Test");
@@ -31,6 +31,15 @@ public class SwExam extends JFrame {
         jTextField.setBounds(200, 200, 200, 30);
         jTextField.setColumns(10); // 텍트 필드 기본 입력문자 개수
         cp.add(jTextField);
+
+        // JCheckBox
+        JCheckBox lion = new JCheckBox("사자");
+        JCheckBox rabbit = new JCheckBox("토끼", true);
+        JCheckBox tiger = new JCheckBox("호랑이");
+
+        cp.add(lion);
+        cp.add(rabbit);
+        cp.add(tiger);
 
         setVisible(true); // 화면에 프레임 출력
 
