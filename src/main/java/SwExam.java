@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class SwExam extends JFrame {
     public SwExam() {
@@ -7,6 +8,9 @@ public class SwExam extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // 프로그램 종료
         setSize(500, 300); // 프레임 크기 설정
         setLocationRelativeTo(null); // 화면 중앙에서 시작
+
+        Container cp = getContentPane(); // 프레임에서 컨텐트 팬 받아오기
+
 
         setVisible(true); // 화면에 프레임 출력
 
