@@ -10,6 +10,8 @@ public class SwExam extends JFrame {
         setLocationRelativeTo(null); // 화면 중앙에서 시작
 
         Container cp = getContentPane(); // 프레임에서 컨텐트 팬 받아오기
+        cp.setLayout(null);
+//        cp.setLayout(new FlowLayout()); // 왼쪽에서 오른쪽으로 정렬
 
 
         setVisible(true); // 화면에 프레임 출력
