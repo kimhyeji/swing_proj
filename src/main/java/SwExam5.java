@@ -19,11 +19,24 @@ public class SwExam5 extends JFrame {
         // 버튼을 눌러 JFileChooser 표시
         JButton showFileChooserButton = new JButton("Open File Chooser");
         showFileChooserButton.addActionListener(e -> showFileChooser(this)); // 버튼 클릭 시 파일 선택기 표시
-
         cp.add(showFileChooserButton);
 
-        setVisible(true); // 화면에 프레임 출력
+        // 버튼을 눌러 JColorChooser 표시
+        JButton showColorChooserButton = new JButton("Open Color Chooser");
+        showColorChooserButton.addActionListener(e -> showColorChooser(this)); // 버튼 클릭 시 색상 선택기 표시
+        cp.add(showColorChooserButton);
 
+        setVisible(true); // 화면에 프레임 출력
+    }
+
+    private void showColorChooser(JFrame frame) {
+        // JColorChooser
+        Color selectedColor = JColorChooser.showDialog(this, "Choose a Color", Color.white);
+        // 색상 선택 대화상자 표시
+
+        if ( selectedColor != null ) { // 사용자가 색상을 선택한 경우
+            getContentPane().setBackground(selectedColor); // 프레임 배경색을 선택된 색상으로 변경
+        }
     }
 
     private void showFileChooser(JFrame frame) {
