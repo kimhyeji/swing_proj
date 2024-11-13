@@ -23,12 +23,29 @@ public class SwExam6 extends JFrame {
                 {"3", "김영수", "27"},
                 {"4", "김민수", "15"}
         };
-        
+
         String[] columnNames = {"ID", "Name", "Age"};
-        
+
         JTable table = new JTable(data, columnNames); // 데이터와 열 이름을 사용해 테이블 생성
         JScrollPane scrollPane = new JScrollPane(table); // 테이블을 스크롤 가능하게 JScrollPane에 추가
         cp.add(scrollPane, BorderLayout.CENTER); // 스크롤이 가능한 테이블을 프레임 중간에 추가
+
+        // JMenuBar, JMenu, JMenuItem, Tooltip
+        JMenuBar menuBar = new JMenuBar();
+
+        JMenu fileMenu = new JMenu("File"); // 파일 메뉴 생성
+        fileMenu.setToolTipText("File operations"); // 툴팁 설정
+
+        JMenuItem openItem = new JMenuItem("Open"); // Open 메뉴 항목 생성
+        openItem.setToolTipText("Open a file"); // Open 툴팁 설정
+        JMenuItem exitItem = new JMenuItem("Exit"); // Open 메뉴 항목 생성
+        exitItem.setToolTipText("Exit system"); // Open 툴팁 설정
+
+        fileMenu.add(openItem);
+        fileMenu.add(exitItem);
+        menuBar.add(fileMenu);
+
+        setJMenuBar(menuBar);
 
         setVisible(true); // 화면에 프레임 출력
     }
