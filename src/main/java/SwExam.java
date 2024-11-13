@@ -21,6 +21,10 @@ public class SwExam extends JFrame {
         jLabel.setBounds(100, 100, 100, 10);
         cp.add(jLabel);
 
+        // JButton
+        JButton jButton = new JButton("Button Test");
+        jButton.setBounds(200, 200, 100, 20);
+        cp.add(jButton);
 
         setVisible(true); // 화면에 프레임 출력
 
